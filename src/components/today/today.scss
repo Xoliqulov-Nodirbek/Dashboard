@@ -1,0 +1,29 @@
+.days-to {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 18px;
+    left: 0;
+    top: 7px;
+    background-color: #3751FF;
+    border-radius: 2px;
+  }
+}
+
+.days-ye {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 18px;
+    left: 0;
+    top: 7px;
+    background-color: #DFE0E7;
+    border-radius: 2px;
+  }
+}

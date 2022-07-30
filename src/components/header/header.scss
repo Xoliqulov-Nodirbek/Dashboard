@@ -1,3 +1,7 @@
+body{
+  background: #F7F8FC;
+}
+
 .list__item:hover{
   position: relative;
 
@@ -12,7 +16,7 @@
   }
 }
 
-.list__item:active{
+.list__item:focus{
   position: relative;
 
   &::before{
@@ -28,5 +32,16 @@
 
 .list__item:hover .list__item-span{
   color: #fff;
+}
 
+.list__item:hover .overview{
+  fill: #fff;
+}
+
+.list__item:hover .tickets{
+  fill: #fff;
+}
+
+.list__item:hover .ideas{
+  fill: #fff;
 }

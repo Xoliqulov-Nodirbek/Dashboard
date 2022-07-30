@@ -1,0 +1,15 @@
+.text{
+  position: relative;
+  margin-left: 32px;
+  padding-left: 32px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 32px;
+    left: 0;
+    top: -2px;
+    background-color: #DFE0EB;
+  }
+}
