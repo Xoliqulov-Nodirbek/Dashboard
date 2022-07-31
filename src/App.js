@@ -1,4 +1,5 @@
 import Header from "./components/header/header";
+import Tickets from "./components/overFooter/overFooter";
 import Overview from "./components/overview/overview";
 import Today from "./components/today/today";
 
@@ -16,6 +17,7 @@ function App() {
       <div className="ml-[285px] mt-[30px] mr-[30px] bg-white border rounded-lg border-[#DFE0EB] border-solid border-l-[0px]">
         <Today />
       </div>
+      <Tickets />
     </>
   );
 }
