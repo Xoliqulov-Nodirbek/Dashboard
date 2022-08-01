@@ -17,12 +17,16 @@ const ListItem = ({ children, item, todos, setTodos }) => {
   }
   window.localStorage.setItem("todos", JSON.stringify(todos));
 
+  const handleChecked = () => {
+    
+  }
+
 
   return (
     <li className="flex items-center justify-between mb-[3px] mt-[10px]" >
       <div className="ml-[30px]">
-        <input defaultChecked={isComplated} className="mx-3 cursor-pointer" type="checkbox" />
-        <span className="inline-block mx-3 text-[15px]" >{children}</span>
+        <input onClick={() => handleChecked()} defaultChecked={isComplated} className="mx-3 cursor-pointer" type="checkbox" />
+        <span className={isComplated ? "mx-3 line-through" : "mx-3"} >{children}</span>
       </div>
       <div className="mr-[30px]">
         <button onClick={() => handleEditTodo(id)} className="border px-[12px] py-[5px] rounded bg-yellow-500 text-gray-700" >Edit</button>

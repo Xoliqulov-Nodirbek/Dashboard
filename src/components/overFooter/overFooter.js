@@ -16,15 +16,14 @@ const Tickets = () => {
       }
       setTodos([...todos, newTodo]);
       evt.target.value = null;
-      console.log(todos);
-      window.localStorage.setItem("todos", JSON.stringify(todos));
     }
+    window.localStorage.setItem("todos", JSON.stringify(todos));
   }
 
   return (
     <>
       <div className="flex items-start justify-between ml-[285px] mt-[30px] mr-[30px] mb-[30px]">
-        <div className="max-w-[650px] w-full border-[1px] border-solid rounded-lg bg-white">
+        <div className="max-w-[550px] w-full border-[1px] border-solid rounded-lg bg-white">
           <div className="flex justify-between items-center p-[30px] pb-[20px]">
             <div>
               <h2 className="font-semibold text-[22px] text-[#252733] leading-6 mb-[10px]">Unresolved tickets</h2>
@@ -49,7 +48,7 @@ const Tickets = () => {
             text="281"
           />
         </div>
-        <div className="max-w-[650px] w-full border-[1px] border-solid rounded-lg bg-white">
+        <div className="max-w-[550px] w-full border-[1px] border-solid rounded-lg bg-white">
           <div className="flex justify-between items-center p-[30px] pb-[20px]">
             <div>
               <h2 className="font-semibold text-[22px] text-[#252733] leading-6 mb-[10px]">Tasks</h2>
