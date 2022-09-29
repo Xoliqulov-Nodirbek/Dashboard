@@ -9,7 +9,7 @@ const ListItem = ({ children, item, todos, setTodos }) => {
   window.localStorage.setItem("todos", JSON.stringify(todos));
 
   const handleEditTodo = (todoId) => {
-    const editText = prompt("Texnti kiriting?")
+    const editText = prompt("Texnti kiriting?", todos.text)
     console.log(editText);
     const findedTodo = todos.find(e => e.id === todoId)
     findedTodo.text = editText;
@@ -17,15 +17,10 @@ const ListItem = ({ children, item, todos, setTodos }) => {
   }
   window.localStorage.setItem("todos", JSON.stringify(todos));
 
-  const handleChecked = () => {
-    
-  }
-
-
   return (
     <li className="flex items-center justify-between mb-[3px] mt-[10px]" >
       <div className="ml-[30px]">
-        <input onClick={() => handleChecked()} defaultChecked={isComplated} className="mx-3 cursor-pointer" type="checkbox" />
+        <input defaultChecked={isComplated} className="mx-3 cursor-pointer" type="checkbox" />
         <span className={isComplated ? "mx-3 line-through" : "mx-3"} >{children}</span>
       </div>
       <div className="mr-[30px]">

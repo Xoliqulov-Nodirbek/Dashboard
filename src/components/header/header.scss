@@ -4,7 +4,7 @@ body{
 
 .list__item:hover{
   position: relative;
-
+  
   &::before{
     content: "";
     position: absolute;
@@ -16,9 +16,11 @@ body{
   }
 }
 
-.list__item:focus{
+.list__item-active{
   position: relative;
-
+  background-color:#3E4049;
+  color: #fff;
+  
   &::before{
     content: "";
     position: absolute;
@@ -30,18 +32,18 @@ body{
   }
 }
 
-.list__item:hover .list__item-span{
+.list__item:hover , .list__item-active .list__item-span{
   color: #fff;
 }
 
-.list__item:hover .overview{
-  fill: #fff;
+.list__item:hover , .list__item-active .overview{
+  color: #fff;
 }
 
-.list__item:hover .tickets{
-  fill: #fff;
+.list__item:hover , .list__item-active .tickets{
+  color: #fff;
 }
 
-.list__item:hover .ideas{
-  fill: #fff;
+.list__item:hover , .list__item-active .ideas{
+  color: #fff;
 }
