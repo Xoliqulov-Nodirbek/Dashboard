@@ -2,12 +2,15 @@
 import axios from "axios";
 import { useState } from "react";
 import useToken from "../../Hook/useToken";
+import Visible from "./Visible.png";
+import IsVisible from "./IsVisible.png";
 
 function Login() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-  const [token, setToken] = useToken();
-
+  const [icon, setIcon] = useState(false);
+  const [__, setToken] = useToken();
+ 
   const handleClick = (e) => {
     e.preventDefault();
 
@@ -42,13 +45,27 @@ function Login() {
                 placeholder="username"
                 onChange={(e) => setName(e.target.value)}
               />
-              <input
-                className="border outline-none px-3 py-1 mb-5"
-                type="password"
-                value={password}
-                placeholder="password"
-                onChange={(e) => setPassword(e.target.value)}
-              />
+              <div className="relative flex">
+                <input
+                  className="border outline-none pl-3 pr-9 py-1 mb-5"
+                  type={icon ? "text" : "password"}
+                  value={password}
+                  placeholder="password"
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <div
+                  className="cursor-pointer absolute right-0 top-1 mr-1"
+                  onClick={() => {
+                    setIcon(!icon);
+                  }}
+                >
+                  {icon ? (
+                    <img className="w-7" src={Visible} alt="show_image" />
+                  ) : (
+                    <img className="w-7" src={IsVisible} alt="show_image" />
+                  )}
+                </div>
+              </div>
               <button
                 className="border w-fit mx-auto px-10 py-1 rounded-md bg-sky-700 text-white mb-10"
                 type="submit"
