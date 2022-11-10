@@ -16,7 +16,7 @@ body{
   }
 }
 
-.list__item-active{
+.active{
   position: relative;
   background-color:#3E4049;
   color: #fff;
@@ -32,18 +32,18 @@ body{
   }
 }
 
-.list__item:hover , .list__item-active .list__item-span{
+.list__item:hover , .active .list__item-span{
   color: #fff;
 }
 
-.list__item:hover , .list__item-active .overview{
+.list__item:hover , .tactive .overview{
   color: #fff;
 }
 
-.list__item:hover , .list__item-active .tickets{
+.list__item:hover , .active .tickets{
   color: #fff;
 }
 
-.list__item:hover , .list__item-active .ideas{
+.list__item:hover , .active .ideas{
   color: #fff;
 }

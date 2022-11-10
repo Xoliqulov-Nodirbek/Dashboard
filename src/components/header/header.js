@@ -27,11 +27,7 @@ const Header = () => {
           <li className="list__item">
             <NavLink
               to="/"
-              className={({ isActive }) =>
-                isActive
-                  ? `list__item-active flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]`
-                  : "flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]"
-              }
+              className={`flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]`}
             >
               <Overwiev />
               <span className="list__item-span inline-block text-[16px] text-[#A4A6B3] ml-[24px]">
@@ -42,11 +38,7 @@ const Header = () => {
           <li className="list__item">
             <NavLink
               to="/tickets"
-              className={({ isActive }) =>
-                isActive
-                  ? `list__item-active flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]`
-                  : "flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]"
-              }
+              className={`flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]`}
             >
               <Tickets />
               <span className="list__item-span inline-block text-[16px] text-[#A4A6B3] ml-[24px]">
@@ -57,11 +49,7 @@ const Header = () => {
           <li className="list__item">
             <NavLink
               to="/ideas"
-              className={({ isActive }) =>
-                isActive
-                  ? `list__item-active flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]`
-                  : "flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]"
-              }
+              className={`flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]`}
             >
               <Ideas />
               <span className="list__item-span inline-block text-[16px] text-[#A4A6B3] ml-[24px]">
@@ -72,11 +60,7 @@ const Header = () => {
           <li className="list__item">
             <NavLink
               to="/contacts"
-              className={({ isActive }) =>
-                isActive
-                  ? `list__item-active flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]`
-                  : "flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]"
-              }
+              className={`list__item-active flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]`}
             >
               <Contacts />
               <span className="list__item-span inline-block text-[16px] text-[#A4A6B3] ml-[24px]">
@@ -87,11 +71,7 @@ const Header = () => {
           <li className="list__item">
             <NavLink
               to="/agents"
-              className={({ isActive }) =>
-                isActive
-                  ? `list__item-active flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]`
-                  : "flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]"
-              }
+              className={`list__item-active flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]`}
             >
               <Agents />
               <span className="list__item-span inline-block text-[16px] text-[#A4A6B3] ml-[24px]">
@@ -102,11 +82,7 @@ const Header = () => {
           <li className="list__item">
             <NavLink
               to="/articles"
-              className={({ isActive }) =>
-                isActive
-                  ? `list__item-active flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]`
-                  : "flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]"
-              }
+              className={`list__item-active flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]`}
             >
               <Articles />
               <span className="list__item-span inline-block text-[16px] text-[#A4A6B3] ml-[24px]">
@@ -119,11 +95,7 @@ const Header = () => {
           <li className="list__item">
             <NavLink
               to="/settings"
-              className={({ isActive }) =>
-                isActive
-                  ? `list__item-active flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]`
-                  : "flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]"
-              }
+              className={`list__item-active flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]`}
             >
               <Settings />
               <span className="list__item-span inline-block text-[16px] text-[#A4A6B3] ml-[24px]">
@@ -134,11 +106,7 @@ const Header = () => {
           <li className="list__item">
             <NavLink
               to="/subscription"
-              className={({ isActive }) =>
-                isActive
-                  ? `list__item-active flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]`
-                  : "flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]"
-              }
+              className={`list__item-active flex items-center pl-10 font-semibold cursor-pointer py-[18px] hover:bg-[#3E4049]`}
             >
               <Subscription />
               <span className="list__item-span inline-block text-[16px] text-[#A4A6B3] ml-[24px]">
