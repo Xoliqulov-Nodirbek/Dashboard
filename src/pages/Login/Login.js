@@ -1,22 +1,31 @@
 /* eslint-disable no-unused-vars */
 import axios from "axios";
-import { useState } from "react";
-import useToken from "../../Hook/useToken";
+import { useContext, useState } from "react";
+// import useToken from "../../Hook/useToken";
 import Visible from "./Visible.png";
 import IsVisible from "./IsVisible.png";
+import { Context } from "../../Context/Context";
+
+const env = process.env.REACT_APP_ALL_API
 
 function Login() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [icon, setIcon] = useState(false);
-  const [__, setToken] = useToken();
- 
+  // const [__, setToken] = useToken();
+  const {token, setToken} = useContext(Context)
+  console.log(token);
   const handleClick = (e) => {
     e.preventDefault();
 
     const postRequest = async () => {
       axios
-        .post("https://intex-shop-production.up.railway.app/api/admins/login", {
+        .post(`${env}admins/login`, {
+          // headers: {
+          //   Authorization: `Bearer ${JSON.parse(
+          //     window.localStorage.getItem("token")
+          //   )}`,
+          // },
           username: name,
           password: password,
         })
@@ -54,15 +63,15 @@ function Login() {
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <div
-                  className="cursor-pointer absolute right-0 top-1 mr-1"
+                  className="cursor-pointer absolute right-0 top-2 mr-2"
                   onClick={() => {
                     setIcon(!icon);
                   }}
                 >
                   {icon ? (
-                    <img className="w-7" src={Visible} alt="show_image" />
+                    <img className="w-5" src={Visible} alt="show_image" />
                   ) : (
-                    <img className="w-7" src={IsVisible} alt="show_image" />
+                    <img className="w-5" src={IsVisible} alt="show_image" />
                   )}
                 </div>
               </div>
